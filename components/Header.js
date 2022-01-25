@@ -5,6 +5,12 @@ const Header = () => {
         <div className='h-10 relative flex cursor-pointer'>
             <Image layout='fill' src="https://links.papareact.com/qd3" objectFit='contain' objectPosition='left' alt='airbnb' />
         </div>
+        {/* search */}
+        <div>
+            <input placeholder='Search here bich' />
+        </div>
+
+        {/* misc */}
     </header>;
 };
 
