@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { SearchIcon } from '@heroicons/react/outline'
+import { SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon } from '@heroicons/react/outline'
 
 const Header = () => {
     return <header className='sticky p-5 md:px-10 shadow-md grid grid-cols-3' >
@@ -13,6 +13,14 @@ const Header = () => {
         </div>
 
         {/* misc */}
+        <div className='flex items-center justify-end space-x-3 text-slate-500'>
+            <p className='hidden md:inline-flex cursor-pointer'>Become a host</p>
+            <GlobeAltIcon className='h-6 cursor-pointer' />
+            <div className='flex border rounded-3xl p-2 space-x-1 shadow-md'>
+                <MenuIcon className='h-6 cursor-pointer' />
+                <UserCircleIcon className='h-6 cursor-pointer' />
+            </div>
+        </div>
     </header>;
 };
 
