@@ -15,6 +15,7 @@ export default function Home({ exploreData }) {
       </Head>
       <Header />
       <HeroImage />
+
       <main className='my-5 max-w-7xl mx-auto px-8'>
         <section>
           <h2 className='text-2xl font-bold mb-5'>Explore nearby</h2>
@@ -27,6 +28,12 @@ export default function Home({ exploreData }) {
                 distance={distance} />
             ))}
           </div>
+        </section>
+
+        <section className='mt-5'>
+          <h2 className='text-2xl font-bold mb-5'>Live Anywhere</h2>
+
+
         </section>
       </main>
 
