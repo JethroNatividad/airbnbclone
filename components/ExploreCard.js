@@ -8,7 +8,7 @@ const ExploreCard = ({ img, location, distance }) => {
         </div>
         <div>
             <p>{location}</p>
-            <p>{distance}</p>
+            <p className='text-sm'>{distance}</p>
         </div>
         {/* <p>{location}</p> */}
     </div>;
