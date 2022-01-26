@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon } from '@heroicons/react/outline'
 
 const Header = () => {
-    return <header className='sticky p-5 md:px-10 shadow-md grid grid-cols-3' >
+    return <header className='sticky p-5 md:px-10 shadow-md grid grid-cols-3 z-50 bg-white' >
         <div className='h-10 relative flex cursor-pointer'>
             <Image layout='fill' src="https://links.papareact.com/qd3" objectFit='contain' objectPosition='left' alt='airbnb' />
         </div>
