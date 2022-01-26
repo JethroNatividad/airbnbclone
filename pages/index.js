@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import HeroImage from '../components/HeroImage'
+import axios from 'axios'
+import ExploreCard from '../components/ExploreCard'
 
-export default function Home() {
+export default function Home({ exploreData }) {
+  console.log(exploreData)
   return (
     <div className='min-h-screen'>
       <Head>
@@ -12,8 +15,32 @@ export default function Home() {
       </Head>
       <Header />
       <HeroImage />
+      <main className='my-5 max-w-7xl mx-auto'>
+        <section>
+          <h2 className='text-2xl font-bold'>Explore nearby</h2>
+          <div>
+            {exploreData?.map(({ img, location, distance }) => (
+              <ExploreCard
+                key={location}
+                img={img}
+                location={location}
+                distance={distance} />
+            ))}
+          </div>
+        </section>
+      </main>
 
 
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const res = await axios.get('https://links.papareact.com/pyp')
+  // console.log(res.data)
+  return {
+    props: {
+      exploreData: res.data
+    }, // will be passed to the page component as props
+  }
 }
