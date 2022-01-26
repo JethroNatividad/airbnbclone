@@ -3,8 +3,9 @@ import Header from '../components/Header'
 import HeroImage from '../components/HeroImage'
 import axios from 'axios'
 import ExploreCard from '../components/ExploreCard'
+import LiveCard from '../components/LiveCard'
 
-export default function Home({ exploreData }) {
+export default function Home({ exploreData, liveData }) {
   console.log(exploreData)
   return (
     <div className='min-h-screen'>
@@ -32,6 +33,9 @@ export default function Home({ exploreData }) {
 
         <section className='mt-5'>
           <h2 className='text-2xl font-bold mb-5'>Live Anywhere</h2>
+          {liveData?.map(({ img, title }) => (
+            <LiveCard key={img} img={img} title={title} />
+          ))}
 
 
         </section>
@@ -43,11 +47,13 @@ export default function Home({ exploreData }) {
 }
 
 export async function getStaticProps() {
-  const res = await axios.get('https://links.papareact.com/pyp')
+  const exploreRes = await axios.get('https://links.papareact.com/pyp')
+  const liveRes = await axios.get('https://links.papareact.com/zp1')
   // console.log(res.data)
   return {
     props: {
-      exploreData: res.data
+      exploreData: exploreRes.data,
+      liveData: liveRes.data
     }, // will be passed to the page component as props
   }
 }
