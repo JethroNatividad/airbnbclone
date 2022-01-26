@@ -15,10 +15,10 @@ export default function Home({ exploreData }) {
       </Head>
       <Header />
       <HeroImage />
-      <main className='my-5 max-w-7xl mx-auto'>
+      <main className='my-5 max-w-7xl mx-auto px-8'>
         <section>
-          <h2 className='text-2xl font-bold'>Explore nearby</h2>
-          <div>
+          <h2 className='text-2xl font-bold mb-5'>Explore nearby</h2>
+          <div className='grid sm:grid-cols-2 lg:grid-cols-4'>
             {exploreData?.map(({ img, location, distance }) => (
               <ExploreCard
                 key={location}
