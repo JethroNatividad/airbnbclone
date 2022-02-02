@@ -31,7 +31,7 @@ export default function Home({ exploreData, liveData }) {
           </div>
         </section>
 
-        <section className='mt-5'>
+        <section className='mt-5 '>
           <h2 className='text-2xl font-bold mb-5'>Live Anywhere</h2>
           <div className='flex overflow-scroll space-x-3 no-scrollbar '>
 
