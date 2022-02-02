@@ -34,9 +34,8 @@ export default function Home({ exploreData, liveData }) {
         <section className='mt-5'>
           <h2 className='text-2xl font-bold mb-5'>Live Anywhere</h2>
           {liveData?.map(({ img, title }) => (
-            <LiveCard key={img} img={img} title={title} />
+            <LiveCard key={title} img={img} title={title} />
           ))}
-
 
         </section>
       </main>
