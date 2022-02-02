@@ -33,9 +33,12 @@ export default function Home({ exploreData, liveData }) {
 
         <section className='mt-5'>
           <h2 className='text-2xl font-bold mb-5'>Live Anywhere</h2>
-          {liveData?.map(({ img, title }) => (
-            <LiveCard key={title} img={img} title={title} />
-          ))}
+          <div className='flex overflow-scroll space-x-3 no-scrollbar '>
+
+            {liveData?.map(({ img, title }) => (
+              <LiveCard key={title} img={img} title={title} />
+            ))}
+          </div>
 
         </section>
       </main>

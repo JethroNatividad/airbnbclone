@@ -7,7 +7,7 @@ const LiveCard = ({ img, title }) => {
         <div className='h-80 w-80 relative mb-2'>
             <Image src={img} layout='fill' objectFit='cover' alt='title' className='rounded-lg' />
         </div>
-        <h2>{title}</h2>
+        <h2 className='text-lg'>{title}</h2>
 
     </div>;
 };
