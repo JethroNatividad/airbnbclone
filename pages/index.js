@@ -4,6 +4,7 @@ import HeroImage from '../components/HeroImage'
 import axios from 'axios'
 import SmallCard from '../components/SmallCard'
 import MediumCard from '../components/MediumCard'
+import LargeCard from '../components/LargeCard'
 
 export default function Home({ exploreData, liveData }) {
   console.log(exploreData)
@@ -40,6 +41,9 @@ export default function Home({ exploreData, liveData }) {
             ))}
           </div>
 
+        </section>
+        <section>
+          <LargeCard title="The Greatest Outdoors" img="https://links.papareact.com/4cj" description="Wishlists created by Airbnb" buttonText="Get Inspired" />
         </section>
       </main>
 
