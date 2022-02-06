@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const LiveCard = ({ img, title }) => {
+const MediumCard = ({ img, title }) => {
     console.log(img);
     return <div>
         <div className='h-80 w-80 relative mb-2'>
@@ -12,4 +12,4 @@ const LiveCard = ({ img, title }) => {
     </div>;
 };
 
-export default LiveCard;
+export default MediumCard;

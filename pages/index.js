@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import HeroImage from '../components/HeroImage'
 import axios from 'axios'
-import ExploreCard from '../components/ExploreCard'
-import LiveCard from '../components/LiveCard'
+import SmallCard from '../components/SmallCard'
+import MediumCard from '../components/MediumCard'
 
 export default function Home({ exploreData, liveData }) {
   console.log(exploreData)
@@ -22,7 +22,7 @@ export default function Home({ exploreData, liveData }) {
           <h2 className='text-2xl font-bold mb-5'>Explore nearby</h2>
           <div className='grid sm:grid-cols-2 lg:grid-cols-4'>
             {exploreData?.map(({ img, location, distance }) => (
-              <ExploreCard
+              <SmallCard
                 key={location}
                 img={img}
                 location={location}
@@ -36,7 +36,7 @@ export default function Home({ exploreData, liveData }) {
           <div className='flex overflow-scroll space-x-3 no-scrollbar '>
 
             {liveData?.map(({ img, title }) => (
-              <LiveCard key={title} img={img} title={title} />
+              <MediumCard key={title} img={img} title={title} />
             ))}
           </div>
 
