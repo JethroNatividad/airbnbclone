@@ -43,13 +43,13 @@ const Footer = () => {
             ]
         },
     ]
-    return <div>
+    return <div className='my-5 max-w-7xl mx-auto px-8 md:grid md:grid-cols-2 xl:grid-cols-4'>
         {footerItems.map((item) => {
-            return <div key={item.section}>
-                <h3>{item.section}</h3>
+            return <div key={item.section} className='my-10'>
+                <h3 className='font-bold'>{item.section}</h3>
                 <ul>
                     {item.items.map((i) => {
-                        return <li key={i.link}>
+                        return <li key={i.link} className='my-2'>
                             <a href={i.link}>{i.name}</a>
                         </li>
                     })}
