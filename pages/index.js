@@ -47,7 +47,7 @@ export default function Home({ exploreData, liveData }) {
           <LargeCard title="The Greatest Outdoors" img="https://links.papareact.com/4cj" description="Wishlists created by Airbnb" buttonText="Get Inspired" />
         </section>
       </main>
-      <footer>
+      <footer className='bg-gray-100'>
         <Footer />
       </footer>
 

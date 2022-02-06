@@ -43,7 +43,7 @@ const Footer = () => {
             ]
         },
     ]
-    return <div className='my-5 max-w-7xl mx-auto px-8 md:grid md:grid-cols-2 xl:grid-cols-4'>
+    return <div className='h-auto max-w-7xl mx-auto px-8 grid md:grid-cols-3 xl:grid-cols-4 text-gray-600'>
         {footerItems.map((item) => {
             return <div key={item.section} className='my-10'>
                 <h3 className='font-bold'>{item.section}</h3>
